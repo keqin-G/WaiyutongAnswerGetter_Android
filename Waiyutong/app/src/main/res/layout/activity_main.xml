@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:filterTouchesWhenObscured="true">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usename_layout"
+                android:layout_marginTop="55dp"
+                android:gravity="center">
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/usenameEditText"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:paddingRight="60dp"
+                    android:maxLength="20"
+                    android:paddingLeft="55dp"/>
+            <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="left|center_horizontal"
+                    android:src="@drawable/usernamepic"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="visible"/>
+            <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="+62"
+                    android:textSize="18sp"
+                    android:visibility="invisible"/>
+
+
+        </FrameLayout>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/usecode_layout"
+                android:layout_below="@id/usename_layout"
+                android:layout_marginTop="6dp"
+                android:gravity="center" >
+
+            <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingLeft="55dp"
+                    android:paddingRight="60dp" />
+
+            <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:src="@drawable/passwordpic"
+                    android:layout_marginLeft="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/param_layout"
+                android:layout_below="@id/usecode_layout"
+                android:layout_marginTop="6dp"
+                android:gravity="center" >
+
+            <EditText
+                    android:id="@+id/paramEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:paddingLeft="55dp"
+                    android:paddingRight="60dp" />
+
+            <TextView
+                    android:layout_width="31dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="参数"
+                    android:layout_marginLeft="8dp" />
+        </FrameLayout>
+
+    </RelativeLayout>
+    <Button
+            android:id="@+id/loginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="250dp"
+            android:background="#ff336699"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="登录"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="300dp"
+              android:text="参数留空自动获取当日作业.\n输入日期(2020-05-01)获取当日作业.\n输入HID输入HID对应作业"
+              android:textSize="20sp"
+              android:id="@+id/textView"/>
+</RelativeLayout>
